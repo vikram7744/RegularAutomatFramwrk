@@ -1,0 +1,26 @@
+<suite name="Suite" parallel="tests">
+  <test name="TestChrome">
+    <parameter name="node" value="http://192.168.100.8:4444/wd/hub"/>
+   <parameter name="browser" value="chrome"/>
+  	<groups>
+  		<run>
+  			<include name="smoke"/>	
+  		</run>
+  	</groups>
+      <packages>
+         <package name="script"/>
+       </packages>
+  </test>
+ <test name="TestFirefox">
+    <parameter name="node" value="http://192.168.100.8:4444/wd/hub"/>
+   <parameter name="browser" value="firefox"/>
+  	<groups>
+  		<run>
+  			<include name="smoke"/>	
+  		</run>
+  	</groups>
+      <packages>
+         <package name="script"/>
+       </packages>
+  </test>
+</suite>
